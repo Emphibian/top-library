@@ -4,16 +4,11 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   display: grid;
   grid-template-rows: 5rem 1fr;
   max-width: 70rem;
   margin: auto;
-  height: clamp(50rem, 100%, 100rem);
 }
 
 header {
@@ -24,7 +19,7 @@ header {
 
 .main {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: min(200px, 20rem) 1fr;
   row-gap: 3rem;
   padding: 0 2rem;
 }
@@ -63,7 +58,7 @@ header {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: clamp(10rem, 10%, 500px);
   grid-auto-flow: row;
   gap: 1rem 1rem;
 }
@@ -77,11 +72,10 @@ header {
   display: grid;
   justify-items: end;
   width: clamp(20rem, 70%, 50rem);
-  height: clamp(10rem, 90%, 20rem);
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid black;
   border-radius: 5px;
-  padding-right: 3rem;
+  padding-right: 2rem;
 }
 
 .book h4 {
@@ -89,4 +83,3 @@ header {
   padding: 1rem 0;
   align-self: end;
 }
-
