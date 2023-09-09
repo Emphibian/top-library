@@ -70,17 +70,19 @@ header {
   row-gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  justify-items: center;
 }
 
 .book {
   text-align: right;
   display: grid;
   justify-items: end;
-  width: clamp(20rem, 70%, 50rem);
-  margin: 0 auto;
+  width: clamp(20rem, 90%, 50rem);
+  margin: 0 1rem;
   border: 3px solid black;
   border-radius: 5px;
   padding-right: 5%;
+  padding-left: 5%;
   background-color: #b1f1ba;
 }
 
