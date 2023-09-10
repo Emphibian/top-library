@@ -55,11 +55,27 @@ header {
   background-color: #a4d7fe;
 }
 
+.add-book:hover {
+  background-color: #9ccdf2;
+}
+
+.add-book:active {
+  background-color: #97c7eb;
+}
+
 .remove-book {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
   background-color: #feeb98;
+}
+
+.remove-book:hover {
+  background-color: #f2e091;
+}
+
+.remove-book:active {
+  background-color: #ebd98d;
 }
 
 .books-container {
