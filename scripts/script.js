@@ -39,6 +39,7 @@ function addBooksToLibrary(title, author) {
 }
 
 addBookDiv.addEventListener("click", () => {
+  inputDialog.classList.add("input-dialog");
   inputDialog.showModal();
 });
 
@@ -49,6 +50,7 @@ confirmBtn.addEventListener("click", (event) => {
   let author = document.querySelector("#author").value;
   addBooksToLibrary(title, author);
 
+  inputDialog.classList.remove("input-dialog");
   inputDialog.close();
 });
 
