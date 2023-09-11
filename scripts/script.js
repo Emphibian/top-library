@@ -29,12 +29,25 @@ function displayBooks() {
     paragraphAuthor.textContent = book.author;
     bookDiv.appendChild(paragraphAuthor);
 
+    let removeBtn = document.createElement("button");
+    removeBtn.textContent = 'Remove';
+    removeBtn.addEventListener("click", () => {
+      removeBookFromLibrary(book.title);
+    })
+    bookDiv.appendChild(removeBtn);
+
     booksContainer.appendChild(bookDiv);
   });
 }
 
 function addBooksToLibrary(title, author) {
   books.push(new Book(title, author));
+  displayBooks();
+}
+
+function removeBookFromLibrary(title) {
+  let index = books.findIndex((book) => book.title === title);
+  books.splice(index, 1);
   displayBooks();
 }
 
