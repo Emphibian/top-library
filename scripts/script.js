@@ -30,7 +30,7 @@ function displayBooks() {
     bookDiv.appendChild(paragraphAuthor);
 
     let removeBtn = document.createElement("button");
-    removeBtn.textContent = 'Remove';
+    removeBtn.innerHTML = '<img src=assets/trash-can-outline.svg></img>';
     removeBtn.addEventListener("click", () => {
       removeBookFromLibrary(book.title);
     })

@@ -109,15 +109,18 @@ header {
 }
 
 .book > button {
-  padding: 0.2rem 0.5rem;
-  border: 2px solid red;
+  border: 3px solid red;
   background-color: inherit;
   color: red;
   border-radius: 5px;
-  font-size: 1rem;
   margin-top: 1rem;
   align-self: end;
-  min-height: min(30px, 2.5rem);
+  display: flex;
+}
+
+.book img {
+  min-width: 20px;
+  width: 2rem;
 }
 
 .input-dialog {
