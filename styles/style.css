@@ -109,13 +109,18 @@ header {
 }
 
 .book > button {
-  border: 3px solid red;
+  border: 3px solid #776b6b;
   background-color: inherit;
-  color: red;
   border-radius: 5px;
   margin-top: 1rem;
   align-self: end;
   display: flex;
+  transition: 0.4s ease-in;
+}
+
+.book > button:hover {
+  border: 3px solid #d24545;
+  background-color: #d24545;
 }
 
 .book img {

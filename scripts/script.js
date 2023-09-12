@@ -1,5 +1,6 @@
 let booksContainer = document.querySelector(".books-container");
 let addBookDiv = document.querySelector(".add-book");
+let removeBookDiv = document.querySelector(".remove-book");
 let inputDialog = document.querySelector("#input-form");
 let confirmBtn = document.querySelector("#confirm-btn");
 
@@ -30,7 +31,7 @@ function displayBooks() {
     bookDiv.appendChild(paragraphAuthor);
 
     let removeBtn = document.createElement("button");
-    removeBtn.innerHTML = '<img src=assets/trash-can-outline.svg></img>';
+    removeBtn.innerHTML = '<img src=assets/trash-can-outline.svg alt="trash-can"></img>';
     removeBtn.addEventListener("click", () => {
       removeBookFromLibrary(book.title);
     })
@@ -54,6 +55,10 @@ function removeBookFromLibrary(title) {
 addBookDiv.addEventListener("click", () => {
   inputDialog.classList.add("input-dialog");
   inputDialog.showModal();
+});
+
+removeBookDiv.addEventListener("click", () => {
+  booksContainer.scrollIntoView();
 });
 
 inputDialog.addEventListener("close", () => {
