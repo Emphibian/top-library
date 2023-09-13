@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -19,26 +20,20 @@
           <h3>Take a book</h3>
         </div>
       </div>
+      <dialog id="input-form">
+        <p>
+          <label for="title">Title:</label>
+          <input id="title" type="text" name="title" />
+        </p>
+        <p>
+          <label for="author">Author:</label>
+          <input id="author" type="text" name="author" />
+        </p>
+        <button id="confirm-btn">Confirm</button>
+      </dialog>
       <div class="current-books">
         <h2>Currently available books</h2>
-        <div class="books-container">
-          <div class="book">
-            <h4>The Hobbit</h4>
-            <p>J.R.R. Tolkien</p>
-          </div>
-          <div class="book">
-            <h4>Lies of Locke Lamora</h4>
-            <p>Scott Lynch</p>
-          </div>
-          <div class="book">
-            <h4>The Hitchhiker's Guide to Galaxy</h4>
-            <p>Douglas Adams</p>
-          </div>
-          <div class="book">
-            <h4>The Adventures of Sherlock Holmes</h4>
-            <p>Sir Arthur Conan Doyle</p>
-          </div>
-        </div>
+        <div class="books-container"></div>
       </div>
     </div>
   </body>
