@@ -13,7 +13,7 @@ function Book(title, author) {
 let books = [
   new Book("The Hobbit", "J.R.R. Tolkien"),
   new Book("The Lies of Locke Lamora", "Scott Lynch"),
-  new Book("The Hitchiker's guide to galaxy", "Douglas Adams"),
+  new Book("The Hitchhiker's Guide to Galaxy", "Douglas Adams"),
   new Book("The Adventures of Sherlock Holmes", "Sir Arthur Conan Doyle")
 ];
 
