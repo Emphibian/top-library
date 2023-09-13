@@ -14,13 +14,14 @@
     <div class="main">
       <div class="hero">
         <div class="add-book">
-          <h3>Add Book</h3>
+          <h3>Give a Book</h3>
         </div>
         <div class="remove-book">
           <h3>Take a book</h3>
         </div>
       </div>
       <dialog id="input-form">
+        <h3>Book Information</h3>
         <p>
           <label for="title">Title:</label>
           <input id="title" type="text" name="title" />
@@ -29,7 +30,10 @@
           <label for="author">Author:</label>
           <input id="author" type="text" name="author" />
         </p>
-        <button id="confirm-btn">Confirm</button>
+        <div class="button-group">
+          <button id="confirm-btn">Add Book</button>
+          <button id="cancel-btn">Cancel</button>
+        </div>
       </dialog>
       <div class="current-books">
         <h2>Currently available books</h2>
