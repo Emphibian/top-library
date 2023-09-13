@@ -3,6 +3,7 @@ let addBookDiv = document.querySelector(".add-book");
 let removeBookDiv = document.querySelector(".remove-book");
 let inputDialog = document.querySelector("#input-form");
 let confirmBtn = document.querySelector("#confirm-btn");
+let cancelBtn = document.querySelector("#cancel-btn");
 
 function Book(title, author) {
   this.title = title;
@@ -72,6 +73,10 @@ confirmBtn.addEventListener("click", (event) => {
   let author = document.querySelector("#author").value;
   addBooksToLibrary(title, author);
 
+  inputDialog.close();
+});
+
+cancelBtn.addEventListener("click", () => {
   inputDialog.close();
 });
 
