@@ -109,7 +109,19 @@ header {
   align-self: end;
 }
 
-.book > button {
+.book > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: end;
+}
+
+.read-button {
+  padding: 0.2rem;
+  min-height: 2rem;
+}
+
+.book-button {
   border: 3px solid #776b6b;
   background-color: inherit;
   border-radius: 5px;
@@ -119,7 +131,7 @@ header {
   transition: 0.4s ease-in;
 }
 
-.book > button:hover {
+.book-button:hover {
   border: 3px solid #d24545;
   background-color: #d24545;
 }
