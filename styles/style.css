@@ -122,7 +122,7 @@ header {
 }
 
 .book-button {
-  border: 3px solid #776b6b;
+  border: none;
   background-color: inherit;
   border-radius: 5px;
   margin-top: 1rem;
@@ -132,7 +132,6 @@ header {
 }
 
 .book-button:hover {
-  border: 3px solid #d24545;
   background-color: #d24545;
 }
 
