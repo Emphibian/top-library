@@ -5,16 +5,17 @@ let inputDialog = document.querySelector("#input-form");
 let confirmBtn = document.querySelector("#confirm-btn");
 let cancelBtn = document.querySelector("#cancel-btn");
 
-function Book(title, author) {
+function Book(title, author, haveRead) {
   this.title = title;
   this.author = author;
+  this.haveRead = haveRead;
 }
 
 let books = [
-  new Book("The Hobbit", "J.R.R. Tolkien"),
-  new Book("The Lies of Locke Lamora", "Scott Lynch"),
-  new Book("The Hitchhiker's Guide to Galaxy", "Douglas Adams"),
-  new Book("The Adventures of Sherlock Holmes", "Sir Arthur Conan Doyle")
+  new Book("The Hobbit", "J.R.R. Tolkien", true),
+  new Book("The Lies of Locke Lamora", "Scott Lynch", true),
+  new Book("The Hitchhiker's Guide to Galaxy", "Douglas Adams", false),
+  new Book("The Adventures of Sherlock Holmes", "Sir Arthur Conan Doyle", true)
 ];
 
 function displayBooks() {
@@ -31,12 +32,25 @@ function displayBooks() {
     paragraphAuthor.textContent = book.author;
     bookDiv.appendChild(paragraphAuthor);
 
+    let btnDiv = document.createElement("div");
+
+    let readBtn = document.createElement("button");
+    readBtn.classList.add("read-button");
+    readBtn.textContent = book.haveRead ? 'Read' : 'Not read';
+    readBtn.addEventListener("click", () => {
+      book.haveRead = book.haveRead ? false : true;
+      displayBooks();
+    });
+    btnDiv.appendChild(readBtn);
+
     let removeBtn = document.createElement("button");
+    removeBtn.classList.add("book-button");
     removeBtn.innerHTML = '<img src=assets/trash-can-outline.svg alt="trash-can"></img>';
     removeBtn.addEventListener("click", () => {
       removeBookFromLibrary(book.title);
     })
-    bookDiv.appendChild(removeBtn);
+    btnDiv.appendChild(removeBtn);
+    bookDiv.appendChild(btnDiv);
 
     booksContainer.appendChild(bookDiv);
   });
