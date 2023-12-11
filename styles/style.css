@@ -167,8 +167,28 @@ header {
   gap: 1rem;
 }
 
-#input-form  button {
+#input-form button {
   width: 50%;
   margin: auto;
   font-size: 15px;
+}
+
+#input-form p * {
+  display: block;
+}
+
+input,
+label,
+span {
+  width: 100%;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+.error.active {
+  color: white;
+  background: #900;
+  padding: 0.2rem;
 }
