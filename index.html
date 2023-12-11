@@ -23,12 +23,18 @@
       <dialog id="input-form">
         <h3>Book Information</h3>
         <p>
-          <label for="title">Title:</label>
-          <input id="title" type="text" name="title" />
+          <label for="title">
+            <span>Title:</span>
+            <input id="title" type="text" name="title" required />
+            <span class="error"></span>
+          </label>
         </p>
         <p>
-          <label for="author">Author:</label>
-          <input id="author" type="text" name="author" />
+          <label for="author">
+            <span>Author:</span>
+            <input id="author" type="text" name="author" required />
+            <span class="error"></span>
+          </label>
         </p>
         <div class="button-group">
           <button id="confirm-btn">Add Book</button>
